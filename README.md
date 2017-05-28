@@ -8,7 +8,7 @@ wildcards.
 ```js
 import wildcardReducer from 'reducer-generator-wildcard'
 
-const system = wildcardReducer({}, {
+const system = wildcardReducer({ /* initial state */ }, {
   'SYSTEM*': (state, { type, ...action }) => ({
     ...state,
     /* whenever any type starts with SYSTEM */
