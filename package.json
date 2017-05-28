@@ -37,5 +37,8 @@
     "webpack": "^2.6.1",
     "webpack-node-externals": "^1.6.0",
     "yargs": "^8.0.1"
+  },
+  "dependencies": {
+    "wildcard-utils": "^1.0.0"
   }
 }

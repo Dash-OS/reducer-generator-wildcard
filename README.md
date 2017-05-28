@@ -3,6 +3,19 @@
 A `reducer-generator` which builds a redux-reducer which matches against 
 wildcards.
 
+### Installation
+
+```
+yarn add reducer-generator-wildcard
+```
+
+**or**
+
+```
+npm install --save reducer-generator-wildcard
+```
+
+
 ### Simple Example
 
 ```js
