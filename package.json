@@ -1,6 +1,6 @@
 {
   "name": "reducer-generator-wildcard",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A redux reducer-generator which builds a redux-reducer which matches against wildcards.",
   "main": "dist/reducer-generator-wildcard.js",
   "author": "Braden R. Napier",

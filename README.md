@@ -1,33 +1,35 @@
-# reducer-generator-object-map
+# reducer-generator-wildcard
 
-A `reducer-generator` which builds a redux-reducer which matches against 
-object literals.
+A [`reducer-generator`](https://github.com/search?utf8=%E2%9C%93&q=topic%3Areducer-generator&type=Repositories) 
+which builds a redux-reducer which matches against wildcard types.
+
+> Under the hood this utilizes our package [wildcard-utils](https://github.com/Dash-OS/wildcard-utils) which 
+> allows us to match strings against objects of wildcards.  Both libraries are tiny.
 
 ### Installation
 
 ```
-yarn add reducer-generator-object-map
+yarn add reducer-generator-wildcard
 ```
 
 **or**
 
 ```
-npm install --save reducer-generator-object-map
+npm install --save reducer-generator-wildcard
 ```
 
 ### Simple Example
 
 ```js
-import objectMapReducer from 'reducer-generator-object-map'
+import createWildcardReducer from 'reducer-generator-wildcard'
 
-const system = wildcardReducer({ /* initial state */ }, {
-  'SYSTEM_ONLINE': (state, { type, ...action }) => ({
+// match any types that start with SYSTEM
+const system = createWildcardReducer({ /* initial state */ }, {
+  'SYSTEM*': (state, { type, ...action }) => ({
     ...state,
-    isOnline: true
+    isOnline: action.isOnline !== undefined
+      ? action.isOnline
+      : state.isOnline,
   }),
-  'SYSTEM_OFFLINE': (state, { type, ...action }) => ({
-    ...state,
-    isOnline: false
-  })
 })
 ```
