@@ -1,30 +1,33 @@
-# reducer-generator-wildcard
+# reducer-generator-object-map
 
 A `reducer-generator` which builds a redux-reducer which matches against 
-wildcards.
+object literals.
 
 ### Installation
 
 ```
-yarn add reducer-generator-wildcard
+yarn add reducer-generator-object-map
 ```
 
 **or**
 
 ```
-npm install --save reducer-generator-wildcard
+npm install --save reducer-generator-object-map
 ```
-
 
 ### Simple Example
 
 ```js
-import wildcardReducer from 'reducer-generator-wildcard'
+import objectMapReducer from 'reducer-generator-object-map'
 
 const system = wildcardReducer({ /* initial state */ }, {
-  'SYSTEM*': (state, { type, ...action }) => ({
+  'SYSTEM_ONLINE': (state, { type, ...action }) => ({
     ...state,
-    /* whenever any type starts with SYSTEM */
+    isOnline: true
+  }),
+  'SYSTEM_OFFLINE': (state, { type, ...action }) => ({
+    ...state,
+    isOnline: false
   })
 })
 ```

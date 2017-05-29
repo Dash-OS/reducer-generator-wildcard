@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "A redux reducer-generator which builds a redux-reducer which matches against wildcards.",
   "main": "dist/reducer-generator-wildcard.js",
-  "module": "src/main.js",
   "author": "Braden R. Napier",
   "license": "MIT",
   "scripts": {
@@ -14,10 +13,15 @@
   },
   "keywords": [
     "react",
+    "react-native",
+    "react-redux",
     "redux",
     "reducer",
     "generator",
-    "wildcard"
+    "wildcard",
+    "redux-saga",
+    "saga-process",
+    "redux-saga-process"
   ],
   "devDependencies": {
     "app-root-dir": "^1.0.2",
