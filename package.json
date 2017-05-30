@@ -1,6 +1,6 @@
 {
   "name": "reducer-generator-wildcard",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A redux reducer-generator which builds a redux-reducer which matches against wildcards.",
   "main": "dist/reducer-generator-wildcard.js",
   "author": "Braden R. Napier",
@@ -23,6 +23,13 @@
     "saga-process",
     "redux-saga-process"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dash-OS/reducer-generator-wildcard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Dash-OS/reducer-generator-wildcard/issues"
+  },
   "devDependencies": {
     "app-root-dir": "^1.0.2",
     "babel-cli": "^6.24.1",
